@@ -23,7 +23,7 @@ Instructions for the daily content run. Havtalia LLC is Mohamed Elroby's agency:
    - Image: one `create-post` type `post` to FB + IG with the FB/IG caption, one to LinkedIn with the LinkedIn caption.
    - **Story every time**: `create-post` type `story` to FB + IG, 5 minutes after the feed post, `summary: ""` (stories take no caption). Use the 9:16 story image/video (`storyUrl`), or the short itself for videos.
    - Write `ghlPostIds`, `scheduledFor` back to the doc. Use an idempotencyKey per post.
-2. **Mark yesterday's scheduled posts.** Fetch them in GHL; if published set `status: posted`, `postedOn`; if failed, put the error in `note` and leave status `approved`.
+2. **Mark yesterday's scheduled posts.** At publish time GHL marks the post you created as `deleted` and splits it into one child post per platform (`parentPostId` = your post id). So check with `get-posts` (body `{type: "all", fromDate, toDate, limit: "50"}`) and match children by `parentPostId`; each child has `status`, `error` and `previewLink`. If published set `status: posted`, `postedOn`; if failed, put the error in `note` and leave status `approved`.
 3. **Make tomorrow's content** (one piece per day; aim for 4 videos + 3 image posts a week). First use any `inbox` items with `status: new` (case studies, reviews, results beat everything else), then mark them `used`. With no new material, use the content pillars below. Create the post as `status: draft` dated tomorrow, with the feed media, a 9:16 story version, and per-platform captions. Mohamed approves in the Hub. Never publish a draft he has not approved.
 
 ## Making media
