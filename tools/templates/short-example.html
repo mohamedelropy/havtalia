@@ -1,0 +1,166 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"JBM";src:url(../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2);font-weight:600}
+:root{--ink:#121815;--forest:#1D4A37;--hi:#FF6B1A;--sand:#F4F1EA;--muted:#6B746F;--red:#E2462E;--wa:#25D366;--lime:#C9E27A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
+#v{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Sch,sans-serif}
+.sc{position:absolute;inset:0;opacity:0}
+.disp{font-family:Fraunces,serif;font-weight:640;letter-spacing:-.012em;line-height:.98;word-spacing:.04em}
+.mono{font-family:JBM,monospace;letter-spacing:.14em;text-transform:uppercase;font-size:32px}
+.a{position:absolute;left:80px;right:80px}
+.hl{color:var(--hi);font-style:italic}
+.grain{position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.06),transparent 50%),radial-gradient(circle at 90% 90%,rgba(255,107,26,.12),transparent 45%)}
+/* caption */
+#cap{position:absolute;left:60px;right:60px;bottom:250px;text-align:center;z-index:20}
+#cap span{display:inline-block;background:rgba(0,0,0,.82);color:#fff;font:800 50px/1.25 Sch;padding:14px 26px;border-radius:18px}
+#cap b{color:var(--lime)}
+#bar{position:absolute;left:0;top:0;height:10px;background:var(--hi);z-index:30}
+#tag{position:absolute;top:70px;left:80px;z-index:25;display:flex;gap:16px;align-items:center;color:#fff;font:700 30px Sch}
+#tag img{width:62px;height:62px;border-radius:50%;background:#fff;object-fit:contain;padding:6px}
+/* s0 */
+#s0{background:var(--ink);color:var(--sand)}
+#s0 .k{top:420px;color:var(--hi)}
+#s0 .h{top:500px;font-size:150px}
+#s0 .h div{will-change:transform}
+.nt{position:absolute;left:90px;right:90px;top:1160px;background:#fff;border-radius:34px;padding:26px 30px;display:flex;gap:22px;align-items:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.nt .ic{width:84px;height:84px;border-radius:22px;background:#0866FF;display:grid;place-items:center;color:#fff;font:800 50px Sch;flex:none}
+.nt b{font:800 30px Sch;color:#111;display:block}.nt p{font:600 32px/1.3 Sch;color:#333}.nt small{font:600 20px JBM;color:#999}
+/* s1 */
+#s1{background:#E9E6DF;color:var(--ink)}
+#s1 .h{top:300px;font-size:96px;text-align:center}
+.adc{position:absolute;left:150px;right:150px;top:560px;background:#fff;border-radius:34px;padding:30px;box-shadow:0 30px 70px -20px rgba(0,0,0,.3)}
+.adc .sp{font:600 24px Sch;color:#888}.adc .t{font:800 40px Sch;margin:8px 0 18px}
+.adc .im{height:300px;border-radius:22px;background:linear-gradient(135deg,#FFD84D,#FF6B1A);display:grid;place-items:center;text-align:center;color:#fff;font:800 66px/1.05 Sch;text-shadow:0 4px 0 rgba(0,0,0,.15)}
+.adc .bt{margin-top:18px;background:#0866FF;color:#fff;text-align:center;padding:18px;border-radius:16px;font:700 30px Sch}
+.x{position:absolute;left:50%;top:640px;width:420px;height:420px;margin-left:-210px}
+.x i{position:absolute;left:50%;top:50%;width:460px;height:40px;margin:-20px 0 0 -230px;background:var(--red);border-radius:20px}
+.bub{position:absolute;font:700 40px Sch;padding:20px 30px;border-radius:30px;background:#fff;box-shadow:0 14px 30px rgba(0,0,0,.15)}
+/* s2 */
+#s2{background:var(--forest);color:var(--sand)}
+#s2 .k{top:300px;color:var(--lime)}
+#s2 .h{top:370px;font-size:120px}
+.it{position:absolute;left:80px;right:80px;display:flex;gap:30px;align-items:center;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.14);border-radius:32px;padding:34px}
+.it .n{width:92px;height:92px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;font:800 46px Sch;flex:none}
+.it b{display:block;font:800 46px/1.15 Sch}.it p{font:600 32px/1.3 Sch;color:rgba(255,255,255,.75);margin-top:6px}
+/* s3 */
+#s3{background:#ECE5DD}
+#s3 .top{position:absolute;left:0;right:0;top:0;height:250px;background:#075E54;color:#fff;display:flex;align-items:flex-end;gap:22px;padding:0 60px 34px}
+#s3 .top .av{width:90px;height:90px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:var(--forest);font:800 40px Sch}
+#s3 .top b{font:800 40px Sch;display:block}#s3 .top small{font:600 26px Sch;opacity:.8}
+.m{position:absolute;max-width:720px;font:600 44px/1.3 Sch;padding:24px 32px;border-radius:30px;box-shadow:0 3px 0 rgba(0,0,0,.08)}
+.m.l{left:60px;background:#fff;border-top-left-radius:6px}
+.m.r{right:60px;background:#DCF8C6;border-top-right-radius:6px}
+.cal{position:absolute;left:120px;right:120px;top:1180px;background:#fff;border-radius:34px;padding:34px;display:flex;gap:30px;align-items:center;box-shadow:0 30px 80px -20px rgba(0,0,0,.35)}
+.cal .d{width:150px;border-radius:22px;overflow:hidden;text-align:center;flex:none;border:3px solid var(--forest)}
+.cal .d small{display:block;background:var(--forest);color:#fff;font:600 24px JBM;padding:8px 0}
+.cal .d b{display:block;font:800 76px Sch;color:var(--ink);padding:6px 0}
+.cal .tx b{font:800 44px Sch;color:var(--forest);display:block}.cal .tx p{font:600 32px Sch;color:var(--muted)}
+.ok{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;font:800 34px Sch;vertical-align:middle;margin-right:12px}
+/* s4 */
+#s4{background:var(--ink);color:var(--sand)}
+#s4 .h{top:330px;font-size:118px;text-align:center}
+.cm{position:absolute;left:100px;right:100px;top:760px;background:#1E2522;border-radius:34px;padding:34px;display:flex;gap:24px;align-items:center}
+.cm .av{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#8BBF7A,#2E6B4F);flex:none}
+.cm small{font:600 28px Sch;color:#9AA39E;display:block}
+.cm .w{font:800 76px Sch;color:#fff;letter-spacing:.04em}
+.cm .heart{margin-left:auto;font-size:56px;color:var(--red)}
+#s4 .sub{top:1080px;text-align:center;font:600 44px/1.35 Sch;color:rgba(244,241,234,.8)}
+#s4 .brand{top:1350px;display:flex;justify-content:center;align-items:center;gap:24px;font:800 52px Sch;color:#fff}
+#s4 .brand img{width:110px;height:110px;border-radius:50%;background:#fff;padding:10px;object-fit:contain}
+#s4 .brand small{display:block;font:600 30px JBM;color:var(--hi);letter-spacing:.1em}
+</style></head><body><div id="v">
+<div id="bar"></div>
+<div id="tag"><img src="../assets/logo.webp"><span>@havtaliallc</span></div>
+
+<div class="sc" id="s0"><div class="grain"></div>
+  <div class="a mono k">Tree service owners</div>
+  <div class="a disp h"><div>Your ads</div><div>bring</div><div class="hl">price</div><div class="hl">shoppers.</div></div>
+  <div class="nt"><div class="ic">f</div><div><small>MESSENGER · now</small><b>New message</b><p>"how much for 1 tree? cheapest pls"</p></div></div>
+</div>
+
+<div class="sc" id="s1"><div class="a disp h">The ad everyone runs:</div>
+  <div class="adc"><div class="sp">Sponsored</div><div class="t">Joe's Tree Service</div><div class="im">FREE ESTIMATE!<br>CALL TODAY!</div><div class="bt">Send message</div></div>
+  <div class="x"><i style="transform:rotate(45deg)"></i><i style="transform:rotate(-45deg)"></i></div>
+  <div class="bub" id="b1" style="left:110px;top:1170px">"How much?" 💸</div>
+  <div class="bub" id="b2" style="right:110px;top:1290px">"Too expensive"</div>
+  <div class="bub" id="b3" style="left:200px;top:1410px">"Found someone cheaper"</div>
+</div>
+
+<div class="sc" id="s2"><div class="a mono k">Do this instead</div><div class="a disp h">3 simple fixes</div>
+  <div class="it" id="i1" style="top:700px"><div class="n">1</div><div><b>Show a real job</b><p>Your before &amp; after, not a stock photo</p></div></div>
+  <div class="it" id="i2" style="top:930px"><div class="n">2</div><div><b>Say who it's for</b><p>"Homeowners with a tree over the house"</p></div></div>
+  <div class="it" id="i3" style="top:1160px"><div class="n">3</div><div><b>Ask 2 questions</b><p>Before you book anyone</p></div></div>
+</div>
+
+<div class="sc" id="s3"><div class="top"><div class="av">T</div><div><b>Your Tree Co.</b><small>online</small></div></div>
+  <div class="m l" id="m1" style="top:330px">How many trees need work? 🌳</div>
+  <div class="m r" id="m2" style="top:500px">3 big oaks near the house</div>
+  <div class="m l" id="m3" style="top:670px">When do you need it done?</div>
+  <div class="m r" id="m4" style="top:840px">This week if possible</div>
+  <div class="cal" id="cal"><div class="d"><small>THU</small><b>14</b></div><div class="tx"><b><span class="ok">✓</span>Estimate booked</b><p>10:00 AM · Ready to hire</p></div></div>
+</div>
+
+<div class="sc" id="s4"><div class="grain"></div>
+  <div class="a disp h">Want this<br>set up <span class="hl">for you?</span></div>
+  <div class="cm"><div class="av"></div><div><small>Comment</small><div class="w" id="w"></div></div><div class="heart">♥</div></div>
+  <div class="a sub">Comment <b style="color:var(--hi)">TREE</b> and I'll send you<br>how it works.</div>
+  <div class="a brand"><img src="../assets/logo.webp"><div>Havtalia<small>Booked estimates for tree pros</small></div></div>
+</div>
+
+<div id="cap"><span></span></div>
+</div>
+<script>
+var DUR=31.5;
+var S=[[0,5.6],[5.6,12.1],[12.1,18.9],[18.9,25.1],[25.1,DUR]];
+var VO=[[0.3,"a0","Tree service owners. Your Facebook ads are bringing you price shoppers. Here's why.",5.03],
+[5.9,"a1","Most ads say: free estimate, call today. That attracts people who just want the cheapest quote.",6.06],
+[12.4,"a2","Instead, show a real job you did. Say who it's for. And ask two questions before you book anyone.",6.44],
+[19.2,"a3","How many trees? And when do they need it done? Now you're talking to people who are ready to hire.",5.65],
+[25.4,"a4","Want us to set this up for you? Comment TREE, and I'll send you how it works.",4.46]];
+var KEY=/^(price|shoppers|cheapest|real|two|ready|hire|TREE,?)/i;
+// caption chunks
+var CH=[];VO.forEach(function(v){var w=v[2].split(" "),n=Math.ceil(w.length/4),per=v[3]/n;for(var i=0;i<n;i++)CH.push([v[0]+i*per,v[0]+(i+1)*per,w.slice(i*4,i*4+4)]);});
+function cl(x){return x<0?0:x>1?1:x}
+function e(t,a,b){var x=cl((t-a)/(b-a));return 1-Math.pow(1-x,3)}
+function bk(t,a,b){var x=cl((t-a)/(b-a)),c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
+function $(id){return document.getElementById(id)}
+function st(el,o,y,s,r){el.style.opacity=o;el.style.transform="translateY("+(y||0)+"px) scale("+(s==null?1:s)+")"+(r?" rotate("+r+"deg)":"")}
+function render(t){
+  $("bar").style.width=(t/DUR*100)+"%";
+  S.forEach(function(s,i){var el=$("s"+i),o=0;if(t>=s[0]&&t<s[1])o=1;if(i>0&&t>=s[0]&&t<s[0]+.25)o=e(t,s[0],s[0]+.25);el.style.opacity=o;});
+  // s0
+  var hs=document.querySelectorAll("#s0 .h div");hs.forEach(function(d,i){var a=.15+i*.32;st(d,e(t,a,a+.35),(1-bk(t,a,a+.5))*120);});
+  st(document.querySelector("#s0 .k"),e(t,0,.4),(1-e(t,0,.4))*30);
+  var nt=document.querySelector(".nt");st(nt,e(t,2.6,3),(1-bk(t,2.6,3.2))*-200+Math.sin(t*3)*4);
+  // s1
+  var b=S[1][0];st(document.querySelector("#s1 .h"),e(t,b,b+.4),(1-e(t,b,b+.4))*40);
+  st(document.querySelector(".adc"),e(t,b+.1,b+.6),(1-bk(t,b+.1,b+.7))*200,1-.1*e(t,b+3,b+3.5));
+  document.querySelector(".adc").style.filter="grayscale("+e(t,b+3,b+3.5)+")";
+  var x=document.querySelector(".x");x.style.opacity=e(t,b+2.9,b+3.1);x.style.transform="scale("+(0.4+0.6*bk(t,b+2.9,b+3.3))+")";
+  ["b1","b2","b3"].forEach(function(id,i){var a=b+3.7+i*.6;st($(id),e(t,a,a+.3),(1-bk(t,a,a+.45))*60,.8+.2*bk(t,a,a+.45),[-3,3,-2][i]);});
+  // s2
+  b=S[2][0];st(document.querySelector("#s2 .k"),e(t,b,b+.4),0);st(document.querySelector("#s2 .h"),e(t,b+.1,b+.5),(1-e(t,b+.1,b+.5))*40);
+  [["i1",b+.6],["i2",b+2.6],["i3",b+4.4]].forEach(function(p){st($(p[0]),e(t,p[1],p[1]+.35),0,1,0);$(p[0]).style.transform="translateX("+((1-bk(t,p[1],p[1]+.5))*-300)+"px)";});
+  // s3
+  b=S[3][0];[["m1",b+.2],["m2",b+1.3],["m3",b+2.3],["m4",b+3.2]].forEach(function(p){st($(p[0]),e(t,p[1],p[1]+.25),(1-bk(t,p[1],p[1]+.4))*40,.9+.1*bk(t,p[1],p[1]+.4));});
+  st($("cal"),e(t,b+4.1,b+4.4),(1-bk(t,b+4.1,b+4.7))*160,.85+.15*bk(t,b+4.1,b+4.7));
+  // s4
+  b=S[4][0];st(document.querySelector("#s4 .h"),e(t,b,b+.5),(1-e(t,b,b+.5))*50);
+  st(document.querySelector(".cm"),e(t,b+1,b+1.4),(1-bk(t,b+1,b+1.5))*80);
+  var word="TREE",k=Math.floor(cl((t-(b+1.5))/0.7)*4);$("w").textContent=word.slice(0,k)+((t*2|0)%2&&k<4?"|":"");
+  document.querySelector(".heart").style.transform="scale("+(1+.5*Math.max(0,1-Math.abs(t-(b+2.5))*4))+")";
+  st(document.querySelector("#s4 .sub"),e(t,b+2.4,b+2.8),(1-e(t,b+2.4,b+2.8))*30);
+  st(document.querySelector("#s4 .brand"),e(t,b+3.2,b+3.7),(1-bk(t,b+3.2,b+3.8))*60);
+  var tg=(t<S[1][0])||(t>=S[2][0]&&t<S[3][0]);$("tag").style.opacity=tg?1:0;
+  // caption
+  var c=CH.filter(function(c){return t>=c[0]&&t<c[1]})[0],sp=document.querySelector("#cap span");
+  if(c){sp.style.display="inline-block";sp.innerHTML=c[2].map(function(w){return KEY.test(w)?"<b>"+w+"</b>":w}).join(" ");}else sp.style.display="none";
+  // hide caption on s4 lower area overlap? keep
+}
+render(0);
+</script></body></html>
