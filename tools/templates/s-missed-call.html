@@ -95,7 +95,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 <div id="tag"><img src="../assets/logo.webp"><span>@havtaliallc</span></div>
 
 <div class="sc" id="s0"><div class="grain"></div>
-  <div class="a mono k">Tree service owners</div>
+  <div class="a mono k">Home service owners</div>
   <div class="a disp h" style="font-size:140px"><div>What does</div><div>one <span class="hl">missed</span></div><div class="hl">call</div><div>cost you?</div></div>
   <div class="nt" style="top:1180px"><div class="ic" style="background:var(--red)">✆</div><div><small>PHONE · 2:14 PM</small><b>Missed call</b><p>New homeowner · no voicemail</p></div></div>
 </div>
@@ -103,7 +103,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 <div class="sc" id="s1">
   <div class="a mono k">Let's do the math</div>
   <div class="a disp big">$1,200</div>
-  <div class="a lab">Say that's your<br>average tree job</div>
+  <div class="a lab">Say that's your<br>average job</div>
   <div class="pill">Plug in your own number</div>
 </div>
 
@@ -116,10 +116,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
   <div class="gone" id="gone">GONE</div>
 </div>
 
-<div class="sc" id="s3"><div class="top"><div class="av">T</div><div><b>Your Tree Co.</b><small>texting back in 2 min</small></div></div>
+<div class="sc" id="s3"><div class="top"><div class="av">Y</div><div><b>Your Company</b><small>texting back in 2 min</small></div></div>
   <div class="mc" id="mc"><div class="ic">✆</div><div><b>Missed call</b><p>2:14 PM · homeowner</p></div></div>
-  <div class="m l" id="m1" style="top:540px">Sorry we missed you! What trees need work? 🌳</div>
-  <div class="m r" id="m2" style="top:760px">2 pines leaning over the fence</div>
+  <div class="m l" id="m1" style="top:540px">Sorry we missed you! What can we help with? 🏠</div>
+  <div class="m r" id="m2" style="top:760px">Roof is leaking over the kitchen</div>
   <div class="m l" id="m3" style="top:930px">Can we come out Friday at 10?</div>
   <div class="cal" id="cal" style="top:1140px"><div class="d"><small>FRI</small><b>10</b></div><div class="tx"><b><span class="ok">✓</span>Estimate booked</b><p>Call saved · job on the calendar</p></div></div>
 </div>
@@ -127,8 +127,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 <div class="sc" id="s4"><div class="grain"></div>
   <div class="a disp h">Want every call<br><span class="hl">followed up?</span></div>
   <div class="cm"><div class="av"></div><div><small>Comment</small><div class="w" id="w"></div></div><div class="heart">♥</div></div>
-  <div class="a sub">Comment <b style="color:var(--hi)">TREE</b> and I'll send you<br>how it works.</div>
-  <div class="a brand"><img src="../assets/logo.webp"><div>Havtalia<small>Booked estimates for tree pros</small></div></div>
+  <div class="a sub">Comment <b style="color:var(--hi)">BOOK</b> and I'll send you<br>how it works.</div>
+  <div class="a brand"><img src="../assets/logo.webp"><div>Havtalia<small>Estimates for home service</small></div></div>
 </div>
 
 <div id="cap"><span></span></div>
@@ -136,12 +136,12 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
 <script>
 var DUR=32.5;
 var S=[[0,5.6],[5.6,10.8],[10.8,18.0],[18.0,24.9],[24.9,DUR]];
-var VO=[[0.3,"a0","Tree service owners. What does one missed call actually cost you? Let's do the math.",4.97],
+var VO=[[0.3,"a0","Home service owners. What does one missed call actually cost you? Let's do the math.",5.01],
 [5.9,"a1","Say your average job is $1,200. Plug in your own number.",4.46],
 [11.1,"a2","You miss three calls a week. If just one of them would have booked, that's $4,800 a month. Gone.",6.55],
 [18.3,"a3","The fix isn't more ads. Text back every missed call in minutes, ask what they need, and book the estimate.",6.29],
-[25.2,"a4","Want us to follow up and book them for you? Comment TREE, and I'll send you how it works.",5.27]];
-var KEY=/^(missed|cost|\$1,200|own|\$4,800|Gone\.?|minutes,?|book|TREE,?)/i;
+[25.2,"a4","Want us to follow up and book them for you? Comment BOOK, and I'll send you how it works.",5.18]];
+var KEY=/^(missed|cost|\$1,200|own|\$4,800|Gone\.?|minutes,?|book|BOOK,?)/i;
 var CH=[];VO.forEach(function(v){var w=v[2].split(" "),n=Math.ceil(w.length/4),per=v[3]/n;for(var i=0;i<n;i++)CH.push([v[0]+i*per,v[0]+(i+1)*per,w.slice(i*4,i*4+4)]);});
 function cl(x){return x<0?0:x>1?1:x}
 function e(t,a,b){var x=cl((t-a)/(b-a));return 1-Math.pow(1-x,3)}
@@ -174,7 +174,7 @@ function render(t){
   // s4
   b=S[4][0];st(q("#s4 .h"),e(t,b,b+.5),(1-e(t,b,b+.5))*50);
   st(q(".cm"),e(t,b+1,b+1.4),(1-bk(t,b+1,b+1.5))*80);
-  var word="TREE",k=Math.floor(cl((t-(b+1.5))/0.7)*4);$("w").textContent=word.slice(0,k)+((t*2|0)%2&&k<4?"|":"");
+  var word="BOOK",k=Math.floor(cl((t-(b+1.5))/0.7)*4);$("w").textContent=word.slice(0,k)+((t*2|0)%2&&k<4?"|":"");
   q(".heart").style.transform="scale("+(1+.5*Math.max(0,1-Math.abs(t-(b+2.5))*4))+")";
   st(q("#s4 .sub"),e(t,b+2.4,b+2.8),(1-e(t,b+2.4,b+2.8))*30);
   st(q("#s4 .brand"),e(t,b+3.2,b+3.7),(1-bk(t,b+3.2,b+3.8))*60);
