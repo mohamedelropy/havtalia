@@ -1,0 +1,184 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"JBM";src:url(../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2);font-weight:600}
+:root{--ink:#121815;--forest:#1D4A37;--hi:#FF6B1A;--sand:#F4F1EA;--muted:#6B746F;--red:#E2462E;--wa:#25D366;--lime:#C9E27A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
+#v{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Sch,sans-serif}
+.sc{position:absolute;inset:0;opacity:0}
+.disp{font-family:Fraunces,serif;font-weight:640;letter-spacing:-.012em;line-height:.98;word-spacing:.04em}
+.mono{font-family:JBM,monospace;letter-spacing:.14em;text-transform:uppercase;font-size:32px}
+.a{position:absolute;left:80px;right:80px}
+.hl{color:var(--hi);font-style:italic}
+.grain{position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.06),transparent 50%),radial-gradient(circle at 90% 90%,rgba(255,107,26,.12),transparent 45%)}
+/* caption */
+#cap{position:absolute;left:60px;right:60px;bottom:250px;text-align:center;z-index:20}
+#cap span{display:inline-block;background:rgba(0,0,0,.82);color:#fff;font:800 50px/1.25 Sch;padding:14px 26px;border-radius:18px}
+#cap b{color:var(--lime)}
+#bar{position:absolute;left:0;top:0;height:10px;background:var(--hi);z-index:30}
+#tag{position:absolute;top:70px;left:80px;z-index:25;display:flex;gap:16px;align-items:center;color:#fff;font:700 30px Sch}
+#tag img{width:62px;height:62px;border-radius:50%;background:#fff;object-fit:contain;padding:6px}
+
+/* s0 */
+#s0{background:var(--ink);color:var(--sand)}
+#s0 .k{top:330px;color:var(--hi)}
+#s0 .h{top:410px;font-size:140px}
+.wk{position:absolute;left:80px;right:80px;top:1060px;display:flex;gap:16px}
+.wk .d{flex:1;border-radius:24px;background:#1E2522;border:2px solid rgba(255,255,255,.12);text-align:center;padding:22px 0 26px}
+.wk .d small{display:block;font:600 26px JBM;color:#9AA39E;letter-spacing:.1em}
+.wk .d b{display:block;font:800 30px Sch;margin-top:16px;color:#6B746F}
+.wk .d.f{background:var(--forest);border-color:var(--lime)}.wk .d.f b{color:var(--lime)}
+.wk .d.o b{color:var(--hi)}
+/* s1 */
+#s1{background:var(--sand);color:var(--ink)}
+#s1 .k{top:250px;color:var(--forest)}
+#s1 .h{top:310px;font-size:104px}
+.adc{position:absolute;left:110px;right:110px;top:600px;background:#fff;border-radius:34px;padding:30px;box-shadow:0 30px 70px -20px rgba(0,0,0,.3)}
+.adc .hd{display:flex;gap:18px;align-items:center}
+.adc .lg{width:70px;height:70px;border-radius:50%;background:var(--forest);color:var(--lime);display:grid;place-items:center;font:800 34px Sch}
+.adc .hd b{font:800 32px Sch;display:block}.adc .hd small{font:600 24px Sch;color:#888}
+.adc .t{font:700 36px/1.3 Sch;margin:20px 0}
+.adc .im{height:330px;border-radius:22px;background:linear-gradient(160deg,#3E7A5C,#1D4A37 60%,#12301F);position:relative;overflow:hidden}
+.adc .im .cr{position:absolute;bottom:0;width:120px;border-radius:60px 60px 0 0;background:#FF6B1A}
+.adc .im .cr:before{content:"";position:absolute;left:50%;top:-74px;margin-left:-37px;width:74px;height:74px;border-radius:50%;background:#E8C39E;box-shadow:0 -14px 0 -2px #FFD84D}
+.adc .im .lb{position:absolute;right:20px;top:20px;background:rgba(0,0,0,.55);color:#fff;font:600 22px JBM;padding:8px 14px;border-radius:10px;letter-spacing:.08em}
+.adc .bt{margin-top:22px;background:#0866FF;color:#fff;text-align:center;padding:20px;border-radius:16px;font:700 32px Sch}
+.chk{position:absolute;left:110px;right:110px;display:flex;gap:18px;align-items:center;font:700 38px Sch;color:var(--forest)}
+.chk i{font-style:normal;width:54px;height:54px;border-radius:50%;background:var(--forest);color:var(--lime);display:grid;place-items:center;font:800 30px Sch;flex:none}
+/* s2 */
+#s2{background:#ECE5DD}
+#s2 .top{position:absolute;left:0;right:0;top:0;height:250px;background:#075E54;color:#fff;display:flex;align-items:flex-end;gap:22px;padding:0 60px 34px}
+#s2 .top .av{width:90px;height:90px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:var(--forest);font:800 40px Sch}
+#s2 .top b{font:800 40px Sch;display:block}#s2 .top small{font:600 26px Sch;opacity:.8}
+.lead{position:absolute;left:90px;right:90px;top:300px;background:#fff;border-radius:30px;padding:24px 30px;display:flex;gap:22px;align-items:center;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.lead .ic{width:80px;height:80px;border-radius:50%;background:#0866FF;color:#fff;display:grid;place-items:center;font:800 40px Sch;flex:none}
+.lead b{font:800 36px Sch;color:#0866FF;display:block}.lead p{font:600 30px Sch;color:#666}
+.m{position:absolute;max-width:760px;font:600 42px/1.3 Sch;padding:22px 30px;border-radius:30px;box-shadow:0 3px 0 rgba(0,0,0,.08)}
+.m.l{left:60px;background:#fff;border-top-left-radius:6px}
+.m.r{right:60px;background:#DCF8C6;border-top-right-radius:6px}
+.m small{display:block;font:600 22px JBM;color:#8a8a8a;margin-top:6px;text-align:right}
+.clock{position:absolute;right:70px;top:1330px;background:var(--hi);color:#fff;font:800 40px Sch;padding:18px 32px;border-radius:60px}
+/* s3 */
+#s3{background:var(--forest);color:var(--sand)}
+#s3 .k{top:250px;color:var(--lime)}
+#s3 .h{top:310px;font-size:104px}
+.dy{position:absolute;left:80px;right:80px;display:flex;gap:24px;align-items:center;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.14);border-radius:28px;padding:22px 28px}
+.dy small{width:110px;font:600 30px JBM;color:var(--lime);letter-spacing:.1em;flex:none}
+.dy .ev{flex:1;background:var(--lime);color:var(--forest);border-radius:18px;padding:16px 22px;font:800 34px Sch;display:flex;justify-content:space-between}
+.dy .ev span{font:600 28px JBM;opacity:.75}
+/* s4 */
+#s4{background:var(--ink);color:var(--sand)}
+#s4 .h{top:300px;font-size:118px;text-align:center}
+.tr{position:absolute;left:60px;right:60px;top:600px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.tr span{border:2px solid rgba(255,255,255,.25);border-radius:60px;padding:12px 28px;font:700 34px Sch;color:#fff}
+.cm{position:absolute;left:100px;right:100px;top:820px;background:#1E2522;border-radius:34px;padding:34px;display:flex;gap:24px;align-items:center}
+.cm .av{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#8BBF7A,#2E6B4F);flex:none}
+.cm small{font:600 28px Sch;color:#9AA39E;display:block}
+.cm .w{font:800 76px Sch;color:#fff;letter-spacing:.04em}
+.cm .heart{margin-left:auto;font-size:56px;color:var(--red)}
+#s4 .sub{top:1110px;text-align:center;font:600 44px/1.35 Sch;color:rgba(244,241,234,.8)}
+#s4 .brand{top:1330px;display:flex;justify-content:center;align-items:center;gap:24px;font:800 52px Sch;color:#fff}
+#s4 .brand img{width:110px;height:110px;border-radius:50%;background:#fff;padding:10px;object-fit:contain}
+#s4 .brand small{display:block;font:600 30px JBM;color:var(--hi);letter-spacing:.1em}
+</style></head><body><div id="v">
+<div id="bar"></div>
+<div id="tag"><img src="../assets/logo.webp"><span>@havtaliallc</span></div>
+
+<div class="sc" id="s0"><div class="grain"></div>
+  <div class="a mono k">Home service owners</div>
+  <div class="a disp h"><div>Open days</div><div>next <span class="hl">week?</span></div><div>Let's fill</div><div class="hl">them.</div></div>
+  <div class="wk"><div class="d"><small>MON</small><b id="d0">OPEN</b></div><div class="d"><small>TUE</small><b id="d1">OPEN</b></div><div class="d"><small>WED</small><b id="d2">OPEN</b></div><div class="d"><small>THU</small><b id="d3">OPEN</b></div><div class="d"><small>FRI</small><b id="d4">OPEN</b></div></div>
+</div>
+
+<div class="sc" id="s1">
+  <div class="a mono k">Step 1 · The ad</div>
+  <div class="a disp h">Your real crew.<br><span class="hl">Their</span> problem.</div>
+  <div class="adc"><div class="hd"><div class="lg">Y</div><div><b>Your Company</b><small>Sponsored · Facebook &amp; Instagram</small></div></div>
+    <div class="t">Pipe burst? Roof leaking? Tree down? We're local and we can look at it this week.</div>
+    <div class="im"><div class="lb">YOUR CREW · REAL JOB</div><div class="cr" style="left:90px;height:150px"></div><div class="cr" style="left:250px;height:180px;background:#C9E27A"></div><div class="cr" style="left:410px;height:140px"></div></div>
+    <div class="bt">Pick your estimate time</div></div>
+  <div class="chk" id="c1" style="top:1330px"><i>✓</i>No stock photos. No "best prices".</div>
+</div>
+
+<div class="sc" id="s2"><div class="top"><div class="av">Y</div><div><b>Your Company</b><small>new lead · replying now</small></div></div>
+  <div class="lead" id="ld"><div class="ic">f</div><div><b>New lead from your ad</b><p>Homeowner · just now</p></div></div>
+  <div class="m l" id="m1" style="top:500px">Hi! Thanks for reaching out. What do you need done? 🏠<small>2 MIN LATER</small></div>
+  <div class="m r" id="m2" style="top:720px">Big tree leaning over the driveway</div>
+  <div class="m l" id="m3" style="top:880px">Got it. How soon do you need it looked at?</div>
+  <div class="m r" id="m4" style="top:1080px">This week if possible</div>
+  <div class="clock" id="ck">Minutes, not hours</div>
+</div>
+
+<div class="sc" id="s3"><div class="grain"></div>
+  <div class="a mono k">Step 3 · Your calendar</div>
+  <div class="a disp h">You just show up<br>and <span class="hl" style="color:var(--lime)">quote.</span></div>
+  <div class="dy" id="y0" style="top:640px"><small>MON</small><div class="ev">Estimate<span>9:00 AM</span></div></div>
+  <div class="dy" id="y1" style="top:790px"><small>TUE</small><div class="ev">Estimate<span>1:30 PM</span></div></div>
+  <div class="dy" id="y2" style="top:940px"><small>WED</small><div class="ev">Estimate<span>10:00 AM</span></div></div>
+  <div class="dy" id="y3" style="top:1090px"><small>THU</small><div class="ev">Estimate<span>3:00 PM</span></div></div>
+  <div class="dy" id="y4" style="top:1240px"><small>FRI</small><div class="ev">Estimate<span>11:00 AM</span></div></div>
+</div>
+
+<div class="sc" id="s4"><div class="grain"></div>
+  <div class="a disp h">Want this for<br><span class="hl">your company?</span></div>
+  <div class="tr"><span>Plumbing</span><span>Roofing</span><span>HVAC</span><span>Tree service</span><span>Landscaping</span></div>
+  <div class="cm"><div class="av"></div><div><small>Comment</small><div class="w" id="w"></div></div><div class="heart">♥</div></div>
+  <div class="a sub">Comment <b style="color:var(--hi)">BOOK</b> and I'll send you<br>how it works.</div>
+  <div class="a brand"><img src="../assets/logo.webp"><div>Havtalia<small>Estimates for home service</small></div></div>
+</div>
+
+<div id="cap"><span></span></div>
+</div>
+<script>
+var DUR=35.5;
+var S=[[0,6.9],[6.9,14.4],[14.4,21.2],[21.2,26.6],[26.6,DUR]];
+var VO=[[0.3,"a0","Home service owners. Got open days on next week's calendar? Here's how we fill them with estimates.",6.12],
+[7.2,"a1","Step one. Facebook and Instagram ads that show your real crew, and name the problem the homeowner has today.",6.98],
+[14.7,"a2","Step two. Every new lead gets a text in minutes, not hours. We ask what they need and how soon.",6.27],
+[21.5,"a3","Step three. The estimate lands on your calendar. You show up and quote the job.",4.86],
+[26.9,"a4","Plumbers, roofers, HVAC, tree and landscaping companies. Want this for yours? Comment BOOK, and I'll send you how it works.",7.59]];
+var KEY=/^(open|estimates\.?|real|crew,?|problem|minutes,|calendar\.|quote|BOOK,?)$/i;
+var CH=[];VO.forEach(function(v){var w=v[2].split(" "),n=Math.ceil(w.length/4),per=v[3]/n;for(var i=0;i<n;i++)CH.push([v[0]+i*per,v[0]+(i+1)*per,w.slice(i*4,i*4+4)]);});
+function cl(x){return x<0?0:x>1?1:x}
+function e(t,a,b){var x=cl((t-a)/(b-a));return 1-Math.pow(1-x,3)}
+function bk(t,a,b){var x=cl((t-a)/(b-a)),c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
+function $(id){return document.getElementById(id)}
+function q(s){return document.querySelector(s)}
+function st(el,o,y,s,r){el.style.opacity=o;el.style.transform="translateY("+(y||0)+"px) scale("+(s==null?1:s)+")"+(r?" rotate("+r+"deg)":"")}
+function render(t){
+  $("bar").style.width=(t/DUR*100)+"%";
+  S.forEach(function(s,i){var el=$("s"+i),o=0;if(t>=s[0]&&t<s[1])o=1;if(i>0&&t>=s[0]&&t<s[0]+.25)o=e(t,s[0],s[0]+.25);el.style.opacity=o;});
+  // s0
+  document.querySelectorAll("#s0 .h div").forEach(function(d,i){var a=.15+i*.3;st(d,e(t,a,a+.35),(1-bk(t,a,a+.5))*120);});
+  st(q("#s0 .k"),e(t,0,.4),(1-e(t,0,.4))*30);
+  st(q("#s0 .wk"),e(t,1.6,2),(1-bk(t,1.6,2.2))*80);
+  document.querySelectorAll("#s0 .wk .d").forEach(function(d,i){var a=4.2+i*.35,on=t>=a;d.className="d"+(on?" f":" o");$("d"+i).textContent=on?"BOOKED":"OPEN";d.style.transform="scale("+(on?1+.12*Math.max(0,1-(t-a)*5):1)+")";});
+  // s1
+  var b=S[1][0];st(q("#s1 .k"),e(t,b,b+.4),0);st(q("#s1 .h"),e(t,b+.1,b+.5),(1-e(t,b+.1,b+.5))*40);
+  st(q(".adc"),e(t,b+.7,b+1.1),(1-bk(t,b+.7,b+1.3))*160,.9+.1*bk(t,b+.7,b+1.3));
+  st($("c1"),e(t,b+4.2,b+4.6),(1-e(t,b+4.2,b+4.6))*30);
+  // s2
+  b=S[2][0];st($("ld"),e(t,b+.1,b+.4),(1-bk(t,b+.1,b+.5))*-60);
+  [["m1",b+1.3],["m2",b+2.6],["m3",b+3.6],["m4",b+4.7]].forEach(function(x){st($(x[0]),e(t,x[1],x[1]+.25),(1-bk(t,x[1],x[1]+.4))*40,.9+.1*bk(t,x[1],x[1]+.4));});
+  st($("ck"),e(t,b+2.1,b+2.4),0,.6+.4*bk(t,b+2.1,b+2.6));
+  // s3
+  b=S[3][0];st(q("#s3 .k"),e(t,b,b+.4),0);st(q("#s3 .h"),e(t,b+.1,b+.5),(1-e(t,b+.1,b+.5))*40);
+  for(var i=0;i<5;i++){var a=b+.9+i*.45;$("y"+i).style.opacity=e(t,a,a+.3);$("y"+i).style.transform="translateX("+((1-bk(t,a,a+.5))*-300)+"px)";}
+  // s4
+  b=S[4][0];st(q("#s4 .h"),e(t,b,b+.5),(1-e(t,b,b+.5))*50);
+  document.querySelectorAll(".tr span").forEach(function(s,i){var a=b+.4+i*.35;st(s,e(t,a,a+.3),(1-bk(t,a,a+.4))*30);});
+  st(q(".cm"),e(t,b+3.3,b+3.7),(1-bk(t,b+3.3,b+3.8))*80);
+  var word="BOOK",k=Math.floor(cl((t-(b+3.8))/0.7)*4);$("w").textContent=word.slice(0,k)+((t*2|0)%2&&k<4?"|":"");
+  q(".heart").style.transform="scale("+(1+.5*Math.max(0,1-Math.abs(t-(b+4.8))*4))+")";
+  st(q("#s4 .sub"),e(t,b+4.6,b+5),(1-e(t,b+4.6,b+5))*30);
+  st(q("#s4 .brand"),e(t,b+5.4,b+5.9),(1-bk(t,b+5.4,b+6))*60);
+  var tg=(t<S[1][0])||(t>=S[3][0]&&t<S[4][0]);$("tag").style.opacity=tg?1:0;
+  var c=CH.filter(function(c){return t>=c[0]&&t<c[1]})[0],sp=q("#cap span");
+  if(c){sp.style.display="inline-block";sp.innerHTML=c[2].map(function(w){return KEY.test(w)?"<b>"+w+"</b>":w}).join(" ");}else sp.style.display="none";
+}
+render(0);
+</script></body></html>
