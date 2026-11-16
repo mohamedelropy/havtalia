@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"JBM";src:url(../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2);font-weight:600}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;background:#1D4A37;color:#F4F1EA;font-family:Sch;padding:250px 80px;position:relative;overflow:hidden}
+body:before{content:"";position:absolute;right:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(#C9E27A33,transparent 70%)}
+.k{font:600 28px JBM;letter-spacing:.14em;color:#C9E27A;text-transform:uppercase}
+h1{font:640 84px/1.02 Fraunces;letter-spacing:-.012em;margin:30px 0 60px}
+h1 em{color:#FF6B1A;font-style:italic}
+.card{border-radius:28px;padding:34px 38px;margin-bottom:24px;position:relative}
+.bad{background:rgba(244,241,234,.08);border:2px solid rgba(244,241,234,.18)}
+.good{background:#F4F1EA;color:#121815}
+.tag{font:600 24px JBM;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.bad .tag{color:#ff8a8a}.good .tag{color:#1D4A37}
+.ad{font:800 40px/1.2 Sch;margin-bottom:20px}
+.bad .ad{color:rgba(244,241,234,.75);text-decoration:line-through;text-decoration-color:rgba(255,107,26,.7);text-decoration-thickness:3px}
+ul{list-style:none;display:grid;gap:10px}
+li{font:600 29px/1.3 Sch;display:flex;gap:14px}
+li i{font-style:normal;flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:800 24px Sch}
+.bad li{color:rgba(244,241,234,.8)}.bad li i{background:rgba(255,107,26,.2);color:#FF6B1A}
+.good li i{background:#1D4A37;color:#C9E27A}
+.ft{position:absolute;left:80px;right:80px;bottom:220px;display:flex;justify-content:space-between;align-items:center}
+.ft .c{background:#FF6B1A;color:#fff;font:800 34px Sch;padding:20px 30px;border-radius:999px}
+.ft .br{display:flex;gap:16px;align-items:center;font:800 34px Sch}.ft img{width:70px;height:70px;border-radius:50%;background:#fff;padding:6px;object-fit:contain}
+
+.calc{background:#F4F1EA;color:#121815;border-radius:28px;padding:20px 40px;margin-bottom:44px}
+.row{display:flex;justify-content:space-between;align-items:baseline;padding:22px 0;border-bottom:2px dashed rgba(18,24,21,.18)}
+.row:last-child{border-bottom:0}
+.row .l{font:600 31px/1.25 Sch;color:#1D4A37}.row .l small{display:block;font:600 22px JBM;letter-spacing:.06em;color:rgba(18,24,21,.55);margin-top:6px;text-transform:uppercase}
+.row .v{font:640 62px Fraunces;color:#121815;white-space:nowrap}
+.row.tot .v{color:#FF6B1A;font-size:76px}
+.note{background:rgba(244,241,234,.08);border:2px solid rgba(244,241,234,.18);border-radius:28px;padding:30px 38px;font:600 31px/1.35 Sch}
+.note b{color:#C9E27A;font-weight:800}
+.fine{font:600 21px JBM;letter-spacing:.08em;color:rgba(244,241,234,.6);text-transform:uppercase;margin-top:22px}
+</style></head><body>
+<div class="k">Home service owners: money math</div>
+<h1>How many jobs pay for <em>your ads?</em></h1>
+<div class="calc">
+<div class="row"><div class="l">Ad budget<small>$30 a day</small></div><div class="v">$900<span style="font-size:34px">/mo</span></div></div>
+<div class="row"><div class="l">Your average job<small>plug in your own</small></div><div class="v">$1,500</div></div>
+<div class="row tot"><div class="l">Jobs to cover the ads<small>$900 ÷ $1,500</small></div><div class="v">1</div></div>
+</div>
+<div class="note">Close <b>1 in 3</b> estimates? Then <b>3 booked estimates a month</b> pays for the ads. Every job after that is yours.</div>
+<div class="fine">Example numbers. Swap in your budget, job size and close rate.</div>
+<div class="ft"><div class="br"><img src="../assets/logo.webp">@havtaliallc</div><div class="c">Comment BOOK</div></div>
+</body></html>
