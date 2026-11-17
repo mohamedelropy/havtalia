@@ -1,0 +1,165 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"JBM";src:url(../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2);font-weight:600}
+:root{--ink:#121815;--forest:#1D4A37;--hi:#FF6B1A;--sand:#F4F1EA;--muted:#6B746F;--red:#E2462E;--wa:#25D366;--lime:#C9E27A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
+#v{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Sch,sans-serif}
+.sc{position:absolute;inset:0;opacity:0}
+.disp{font-family:Fraunces,serif;font-weight:640;letter-spacing:-.012em;line-height:.98;word-spacing:.04em}
+.mono{font-family:JBM,monospace;letter-spacing:.14em;text-transform:uppercase;font-size:32px}
+.a{position:absolute;left:80px;right:80px}
+.hl{color:var(--hi);font-style:italic}
+.grain{position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.06),transparent 50%),radial-gradient(circle at 90% 90%,rgba(255,107,26,.12),transparent 45%)}
+/* caption */
+#cap{position:absolute;left:60px;right:60px;bottom:250px;text-align:center;z-index:20}
+#cap span{display:inline-block;background:rgba(0,0,0,.82);color:#fff;font:800 50px/1.25 Sch;padding:14px 26px;border-radius:18px}
+#cap b{color:var(--lime)}
+#bar{position:absolute;left:0;top:0;height:10px;background:var(--hi);z-index:30}
+#tag{position:absolute;top:70px;left:80px;z-index:25;display:flex;gap:16px;align-items:center;color:#fff;font:700 30px Sch}
+#tag img{width:62px;height:62px;border-radius:50%;background:#fff;object-fit:contain;padding:6px}
+
+/* s0 */
+#s0{background:var(--ink);color:var(--sand)}
+#s0 .k{top:230px;color:var(--hi)}
+#s0 .h{top:300px;font-size:118px}
+.feed{position:absolute;left:150px;right:150px;top:760px;height:680px;border-radius:44px;background:#E9E6DF;overflow:hidden;border:10px solid #2A322E}
+.feed .in{position:absolute;left:24px;right:24px;top:0}
+.fc{background:#fff;border-radius:24px;margin-top:24px;padding:22px 24px;color:var(--ink)}
+.fc .hd{display:flex;gap:14px;align-items:center;font:700 26px Sch}.fc .hd i{width:52px;height:52px;border-radius:50%;background:#C9CFCB;display:block}
+.fc .hd small{display:block;font:600 20px Sch;color:var(--muted)}
+.fc .im{height:150px;border-radius:16px;margin-top:16px;background:linear-gradient(135deg,#D7D2C7,#BDB6A8)}
+.fc p{font:800 34px/1.2 Sch;margin-top:14px}
+.fc{position:relative}.stamp{position:absolute;left:50%;top:100px;transform:translateX(-50%) rotate(-8deg);border:8px solid var(--red);color:var(--red);font:800 46px JBM;padding:8px 22px;border-radius:16px;letter-spacing:.06em;background:rgba(18,24,21,.85);white-space:nowrap}
+/* trade scenes */
+.tsc{background:var(--sand);color:var(--ink)}
+.tsc .k{top:230px;color:var(--forest)}
+.tsc .h{top:290px;font-size:120px}
+.ad{position:absolute;left:90px;right:90px;background:#fff;border-radius:30px;padding:28px 32px;box-shadow:0 24px 60px -24px rgba(0,0,0,.3);border:4px solid transparent}
+.ad .hd{display:flex;gap:16px;align-items:center;font:700 28px Sch}.ad .hd i{width:58px;height:58px;border-radius:50%;background:var(--forest);display:block;flex:none}
+.ad .hd small{display:block;font:600 22px Sch;color:var(--muted)}
+.ad p{font:800 46px/1.18 Sch;margin-top:18px}
+.ad .lb{position:absolute;top:-26px;right:28px;font:800 28px JBM;letter-spacing:.08em;padding:8px 18px;border-radius:12px}
+.ad.w{top:560px}.ad.w .lb{background:#F3D9D3;color:var(--red)}
+.ad.w .x{position:absolute;left:24px;right:24px;top:50%;height:8px;background:var(--red);border-radius:4px;transform-origin:left center}
+.ad.g{top:930px;border-color:var(--forest)}.ad.g .lb{background:var(--lime);color:var(--forest)}
+.ad.g .loc{font:600 26px JBM;color:var(--muted);margin-top:12px;letter-spacing:.04em}
+.ad.g .bt{margin-top:20px;background:var(--hi);color:#fff;font:800 32px Sch;border-radius:16px;padding:16px;text-align:center}
+/* s4 */
+#s4{background:var(--forest);color:var(--sand)}
+#s4 .k{top:230px;color:var(--lime)}
+#s4 .h{top:290px;font-size:112px}
+.dy{position:absolute;left:80px;right:80px;display:flex;gap:26px;align-items:center;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.14);border-radius:28px;padding:30px 32px}
+.dy i{font-style:normal;width:84px;height:84px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;font:800 44px Fraunces;flex:none}
+.dy b{font:800 48px/1.2 Sch}
+.dy small{display:block;font:600 28px Sch;color:rgba(244,241,234,.7);margin-top:6px}
+/* s5 */
+#s5{background:var(--ink);color:var(--sand)}
+#s5 .h{top:300px;font-size:118px;text-align:center}
+.tr{position:absolute;left:60px;right:60px;top:600px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.tr span{border:2px solid rgba(255,255,255,.25);border-radius:60px;padding:12px 28px;font:700 34px Sch;color:#fff}
+.cm{position:absolute;left:100px;right:100px;top:820px;background:#1E2522;border-radius:34px;padding:34px;display:flex;gap:24px;align-items:center}
+.cm .av{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#8BBF7A,#2E6B4F);flex:none}
+.cm small{font:600 28px Sch;color:#9AA39E;display:block}
+.cm .w{font:800 76px Sch;color:#fff;letter-spacing:.04em}
+.cm .heart{margin-left:auto;font-size:56px;color:var(--red)}
+#s5 .sub{top:1110px;text-align:center;font:600 44px/1.35 Sch;color:rgba(244,241,234,.8)}
+#s5 .brand{top:1330px;display:flex;justify-content:center;align-items:center;gap:24px;font:800 52px Sch;color:#fff}
+#s5 .brand img{width:110px;height:110px;border-radius:50%;background:#fff;padding:10px;object-fit:contain}
+#s5 .brand small{display:block;font:600 30px JBM;color:var(--hi);letter-spacing:.1em}
+</style></head><body><div id="v">
+<div id="bar"></div>
+<div id="tag"><img src="../assets/logo.webp"><span>@havtaliallc</span></div>
+<div class="sc" id="s0"><div class="grain"></div>
+  <div class="a mono k">Home service owners</div>
+  <div class="a disp h"><div>Your ad's first line</div><div class="hl">decides everything.</div></div>
+  <div class="feed"><div class="in" id="fin"><div class="fc"><div class="hd"><i></i><div>Neighbor post<small>2h</small></div></div><div class="im"></div><p>Anyone know a good fence guy?</p></div><div class="fc"><div class="hd"><i></i><div>Your Company<small>Sponsored</small></div></div><div class="im"></div><p>Quality service. Best prices. Call today!</p><div class="stamp" id="stamp">SCROLLED PAST</div></div><div class="fc"><div class="hd"><i></i><div>Local news<small>5h</small></div></div><div class="im"></div><p>Weekend weather update</p></div><div class="fc"><div class="hd"><i></i><div>Friend<small>1d</small></div></div><div class="im"></div><p>Back yard finally done!</p></div></div></div>
+</div>
+<div class="sc tsc" id="s1">
+  <div class="a mono k">Ad rewrite · Plumbing</div>
+  <div class="a disp h">Plumbers:</div>
+  <div class="ad w" id="w1"><div class="lb">✗ GENERIC</div><div class="hd"><i></i><div>Your Company<small>Sponsored</small></div></div><p>Licensed &amp; insured plumbers. Call today!</p><div class="x" id="x1"></div></div>
+  <div class="ad g" id="g1"><div class="lb">✓ STOPS THE SCROLL</div><div class="hd"><i></i><div>Your Company<small>Sponsored</small></div></div><p>Water heater out? Pick your install time this week.</p><div class="loc">📍 [YOUR CITY]</div><div class="bt">Book install</div></div>
+</div>
+<div class="sc tsc" id="s2">
+  <div class="a mono k">Ad rewrite · Roofing</div>
+  <div class="a disp h">Roofers:</div>
+  <div class="ad w" id="w2"><div class="lb">✗ GENERIC</div><div class="hd"><i></i><div>Your Company<small>Sponsored</small></div></div><p>#1 roofing company in town!</p><div class="x" id="x2"></div></div>
+  <div class="ad g" id="g2"><div class="lb">✓ STOPS THE SCROLL</div><div class="hd"><i></i><div>Your Company<small>Sponsored</small></div></div><p>Roof leaking after the storm? Book your inspection this week.</p><div class="loc">📍 [YOUR CITY]</div><div class="bt">Book inspection</div></div>
+</div>
+<div class="sc tsc" id="s3">
+  <div class="a mono k">Ad rewrite · HVAC</div>
+  <div class="a disp h">HVAC:</div>
+  <div class="ad w" id="w3"><div class="lb">✗ GENERIC</div><div class="hd"><i></i><div>Your Company<small>Sponsored</small></div></div><p>Quality service at great prices!</p><div class="x" id="x3"></div></div>
+  <div class="ad g" id="g3"><div class="lb">✓ STOPS THE SCROLL</div><div class="hd"><i></i><div>Your Company<small>Sponsored</small></div></div><p>Furnace not kicking on? Pick your service time today.</p><div class="loc">📍 [YOUR CITY]</div><div class="bt">Pick a time</div></div>
+</div>
+<div class="sc" id="s4"><div class="grain"></div>
+  <div class="a mono k">The pattern</div>
+  <div class="a disp h">Every line that<br><span class="hl" style="color:var(--lime)">works.</span></div>
+  <div class="dy" id="y0" style="top:700px"><i>1</i><div><b>Name the problem</b><small>the one they have right now</small></div></div>
+  <div class="dy" id="y1" style="top:900px"><i>2</i><div><b>Add your city</b><small>so it feels local, not national</small></div></div>
+  <div class="dy" id="y2" style="top:1100px"><i>3</i><div><b>One next step</b><small>pick a time, book the estimate</small></div></div>
+</div>
+<div class="sc" id="s5"><div class="grain"></div>
+  <div class="a disp h">Want ads like this<br><span class="hl">for your company?</span></div>
+  <div class="tr"><span>Plumbing</span><span>Roofing</span><span>HVAC</span><span>Tree service</span><span>Landscaping</span></div>
+  <div class="cm"><div class="av"></div><div><small>Comment</small><div class="w" id="w"></div></div><div class="heart">♥</div></div>
+  <div class="a sub">Comment <b style="color:var(--hi)">BOOK</b> and we'll look<br>at your ads with you.</div>
+  <div class="a brand"><img src="../assets/logo.webp"><div>Havtalia<small>Estimates for home service</small></div></div>
+</div>
+<div id="cap"><span></span></div>
+</div>
+<script>
+var DUR=40.0;
+var S=[[0,6.8],[6.8,13.9],[13.9,22.0],[22.0,29.2],[29.2,35.1],[35.1,DUR]];
+var VO=[[0.3, "a0", "Home service owners. The first line of your ad decides if anyone stops scrolling. Let's fix three.", 6.34],
+[7.0, "a1", "Plumbers. Not: licensed and insured, call today. Try: water heater out? Pick your install time this week.", 6.63],
+[14.1, "a2", "Roofers. Not: number one roofing company in town. Try: roof leaking after the storm? Book your inspection this week.", 7.7],
+[22.2, "a3", "HVAC. Not: quality service at great prices. Try: furnace not kicking on? Pick your service time today.", 6.83],
+[29.4, "a4", "The pattern. Name the problem they have right now. Add your city. Give one clear next step.", 5.53],
+[35.3, "a5", "Want us to write and run ads like this for your company? Comment BOOK.", 4.07]];
+var KEY=/^(first|scrolling\.?|three\.?|Not:|Try:|problem|city\.?|step\.?|BOOK\.?)$/i;
+var CH=[];VO.forEach(function(v){var w=v[2].split(" "),n=Math.ceil(w.length/4),per=v[3]/n;for(var i=0;i<n;i++)CH.push([v[0]+i*per,v[0]+(i+1)*per,w.slice(i*4,i*4+4)]);});
+function wt(k,word){var v=VO.filter(function(x){return x[1]==k})[0],w=v[2].split(" "),i=w.indexOf(word);return v[0]+v[3]*i/w.length;}
+function cl(x){return x<0?0:x>1?1:x}
+function e(t,a,b){var x=cl((t-a)/(b-a));return 1-Math.pow(1-x,3)}
+function bk(t,a,b){var x=cl((t-a)/(b-a)),c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
+function $(id){return document.getElementById(id)}
+function q(s){return document.querySelector(s)}
+function st(el,o,y,s,r){el.style.opacity=o;el.style.transform="translateY("+(y||0)+"px) scale("+(s==null?1:s)+")"+(r?" rotate("+r+"deg)":"")}
+function render(t){
+  $("bar").style.width=(t/DUR*100)+"%";
+  S.forEach(function(s,i){var el=$("s"+i),o=0;if(t>=s[0]&&t<s[1])o=1;if(i>0&&t>=s[0]&&t<s[0]+.25)o=e(t,s[0],s[0]+.25);el.style.opacity=o;});
+  st(q("#s0 .k"),e(t,0,.4),(1-e(t,0,.4))*30);
+  document.querySelectorAll("#s0 .h div").forEach(function(d,i){var a=[.2,1.4][i];st(d,e(t,a,a+.35),(1-bk(t,a,a+.5))*120);});
+  st(q(".feed"),e(t,.8,1.2),(1-bk(t,.8,1.4))*120);
+  // feed scrolls fast past the generic ad
+  var sy=-e(t,1.6,2.5)*300-e(t,4.6,5.8)*700;$("fin").style.transform="translateY("+sy+"px)";
+  var sa=3.1;var stp=$("stamp");stp.style.opacity=e(t,sa,sa+.2);stp.style.transform="translateX(-50%) rotate(-8deg) scale("+(1.6-.6*bk(t,sa,sa+.4))+")";
+  [1,2,3].forEach(function(i){var b=S[i][0],k="a"+i;
+    st(q("#s"+i+" .k"),e(t,b,b+.4),0);st(q("#s"+i+" .h"),e(t,b+.1,b+.5),(1-e(t,b+.1,b+.5))*40);
+    var n=wt(k,"Not:"),tr=wt(k,"Try:");
+    var wo=e(t,n,n+.3)*(1-.55*e(t,tr,tr+.4));st($("w"+i),wo,(1-bk(t,n,n+.5))*80,1-.04*e(t,tr,tr+.4));
+    $("x"+i).style.transform="scaleX("+e(t,tr-.3,tr+.1)+")";
+    st($("g"+i),e(t,tr+.1,tr+.4),(1-bk(t,tr+.1,tr+.6))*120,.92+.08*bk(t,tr+.1,tr+.6));
+    q("#g"+i+" .bt").style.transform="scale("+(1+.06*Math.max(0,1-Math.abs(t-(tr+2.4))*3))+")";
+  });
+  var b=S[4][0];st(q("#s4 .k"),e(t,b,b+.4),0);st(q("#s4 .h"),e(t,b+.1,b+.5),(1-e(t,b+.1,b+.5))*40);
+  ["Name","Add","Give"].forEach(function(w,i){var a=wt("a4",w)-.5;$("y"+i).style.opacity=e(t,a,a+.3);$("y"+i).style.transform="translateX("+((1-bk(t,a,a+.5))*-300)+"px)";});
+  b=S[5][0];st(q("#s5 .h"),e(t,b,b+.5),(1-e(t,b,b+.5))*50);
+  document.querySelectorAll(".tr span").forEach(function(s,i){var a=b+.4+i*.3;st(s,e(t,a,a+.3),(1-bk(t,a,a+.4))*30);});
+  st(q(".cm"),e(t,b+1.6,b+2),(1-bk(t,b+1.6,b+2.1))*80);
+  var kb=S[5][0]+2.2,k=Math.floor(cl((t-kb)/0.6)*4);$("w").textContent="BOOK".slice(0,k)+((t*2|0)%2&&k<4?"|":"");
+  q(".heart").style.transform="scale("+(1+.5*Math.max(0,1-Math.abs(t-(kb+.9))*4))+")";
+  st(q("#s5 .sub"),e(t,b+2.4,b+2.8),(1-e(t,b+2.4,b+2.8))*30);
+  st(q("#s5 .brand"),e(t,b+3.2,b+3.7),(1-bk(t,b+3.2,b+3.8))*60);
+  $("tag").style.opacity=(t<S[1][0])?1:0;
+  var c=CH.filter(function(c){return t>=c[0]&&t<c[1]})[0],sp=q("#cap span");
+  if(c){sp.style.display="inline-block";sp.innerHTML=c[2].map(function(w){return KEY.test(w)?"<b>"+w+"</b>":w}).join(" ");}else sp.style.display="none";
+}
+render(0);
+</script></body></html>
