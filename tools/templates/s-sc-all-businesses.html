@@ -1,0 +1,79 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"JBM";src:url(../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2);font-weight:600}
+:root{--ink:#121815;--forest:#1D4A37;--hi:#FF6B1A;--sand:#F4F1EA;--muted:#6B746F;--lime:#C9E27A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121815}
+#v{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Sch,sans-serif}
+.sc{position:absolute;inset:0;opacity:0}
+.disp{font-family:Fraunces,serif;font-weight:640;letter-spacing:-.012em;line-height:.98}
+.mono{font-family:JBM,monospace;letter-spacing:.14em;text-transform:uppercase;font-size:32px}
+.a{position:absolute;left:80px;right:80px}
+#cap{position:absolute;left:60px;right:60px;bottom:250px;text-align:center;z-index:20}
+#cap span{display:inline-block;background:rgba(0,0,0,.82);color:#fff;font:800 50px/1.25 Sch;padding:14px 26px;border-radius:18px}
+#cap b{color:#C9E27A}
+#bar{position:absolute;left:0;top:0;height:10px;background:#FF6B1A;z-index:30}
+#tag{position:absolute;top:70px;left:80px;z-index:25;display:flex;gap:16px;align-items:center;font:700 30px Sch}
+#tag img{width:62px;height:62px;border-radius:50%;background:#fff;object-fit:contain;padding:6px}
+.offer{position:absolute;left:80px;right:80px;border-radius:36px;padding:44px}
+.offer .pr{font:700 150px/1 Fraunces}
+.offer p{font:800 54px/1.2 Sch;margin-top:16px}
+.offer .g{margin-top:26px;padding-top:24px;border-top:2px solid currentColor;font:700 36px/1.3 Sch;opacity:.9}
+.cm{position:absolute;left:80px;right:80px;display:flex;align-items:center;gap:24px;background:#fff;color:#121815;border-radius:30px;padding:24px 30px;box-shadow:0 24px 60px -24px rgba(0,0,0,.4)}
+.cm .av{width:80px;height:80px;border-radius:50%;background:#1D4A37}
+.cm small{font:600 26px JBM;color:#6B746F;letter-spacing:.1em;text-transform:uppercase}
+.cm .w{font:800 64px Sch;color:#FF6B1A;min-height:70px}
+.cm .heart{margin-left:auto;font-size:56px;color:#FF6B1A}
+
+.sc{background:radial-gradient(circle at 50% 35%,#2a6049,#0f2a1f 75%);color:#F4F1EA}
+.hk{position:absolute;left:80px;right:80px;font:640 120px/1 Fraunces;letter-spacing:-.015em}
+.key{position:absolute;left:0;right:0;margin:auto;top:880px;width:300px;height:300px;border-radius:50%;background:#C9E27A;display:grid;place-items:center;font-size:150px;box-shadow:0 0 0 30px rgba(201,226,122,.15),0 0 0 70px rgba(201,226,122,.07)}
+.node{position:absolute;left:0;right:0;margin:auto;width:fit-content;background:#F4F1EA;color:#121815;border-radius:30px;padding:30px 44px;font:800 54px Sch;display:flex;gap:20px;align-items:center;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.node i{font-style:normal;font-size:64px}
+.node small{display:block;font:600 24px JBM;color:#1D4A37;letter-spacing:.1em}
+.line{position:absolute;left:538px;width:6px;background:#C9E27A;transform-origin:top}
+.stack{position:absolute;left:0;right:0;margin:auto;width:760px;top:1000px;height:260px}
+.stack div{position:absolute;inset:0;border-radius:30px}
+.eye{position:absolute;left:0;right:0;text-align:center;top:760px;font-size:260px}
+.quote{position:absolute;left:80px;right:80px;top:520px;font:640 96px/1.05 Fraunces}
+</style></head><body><div id="v"><div id="bar"></div><div id="tag" style="color:#fff"><img src="../assets/logo.webp">@havtaliallc</div><div class="sc" id="s0"><div class="hk" style="top:300px" data-d=".1">One business.</div>
+<div class="hk" style="top:440px;color:#C9E27A;font-style:italic" data-d="1.6">Then all of them.</div>
+<div class="key" data-d=".6" data-m="pop">🔑</div></div><div class="sc" id="s1"><div class="a mono" style="top:300px;color:#C9E27A" data-d=".1">Real client · South Carolina</div>
+<div class="hk" style="top:360px;font-size:96px" data-d=".3">First, a test with his <span style="color:#FF6B1A;font-style:italic">tree company.</span></div>
+<div class="node" data-d="1.6" data-m="pop" style="top:900px"><i>🌳</i><div><small>BUSINESS #1</small>Tree service</div></div></div><div class="sc" id="s2"><div class="node" style="top:900px"><i>🌳</i><div><small>BUSINESS #1</small>Tree service ✓</div></div>
+<div class="eye" data-d=".2" data-m="pop" style="top:420px;font-size:200px">👀</div>
+<div class="hk" style="top:1150px;text-align:center;font-size:90px" data-d=".5">He liked what he saw.</div></div><div class="sc" id="s3"><div class="node" style="top:420px"><i>🌳</i><div><small>BUSINESS #1</small>Tree service ✓</div></div>
+<div class="line" id="ln" style="top:600px;height:330px"></div>
+<div class="stack"><div style="background:#1D4A37;border:3px solid #C9E27A;transform:translate(30px,40px)" data-d=".9" data-m="pop"></div><div style="background:#2a6049;border:3px solid #C9E27A;transform:translate(15px,20px)" data-d="1.0" data-m="pop"></div>
+<div style="background:#FF6B1A;display:grid;place-items:center;font:800 62px/1.1 Sch;color:#fff;text-align:center" data-d="1.1" data-m="pop">+ His other<br>businesses</div></div></div><div class="sc" id="s4"><div class="a mono" style="top:300px;color:#C9E27A" data-d=".1">The only review that matters</div>
+<div class="quote" data-d=".4">When an owner hands you <span style="color:#FF6B1A;font-style:italic">all</span> his businesses, that's proof.</div>
+<div class="a" style="top:1000px;font:800 60px Sch" data-d="3.6">Start with one.</div>
+<div class="cm" data-d="4.6" style="top:1130px"><div class="av"></div><div><small>Comment</small><div class="w" id="w"></div></div><div class="heart">♥</div></div></div><div id="cap"><span></span></div></div><script>var DUR=24.81;var S=[[0, 4.32], [4.32, 10.03], [10.03, 12.34], [12.34, 15.68], [15.68, 24.81]];var VO=[[0.3, "t0", "He trusted us with one business. Then he handed us the rest.", 3.52], [4.62, "t1", "A tree service owner in South Carolina tested us with his tree company first.", 4.91], [10.33, "t2", "He liked what he saw.", 1.51], [12.64, "t3", "So he hired us for his other businesses too.", 2.54], [15.98, "t4", "When an owner gives you all of his businesses, that's the only review that matters. Want to start with one? Comment BOOK.", 6.93]];var KEY=/^(trusted|one|business\.|rest\.|South|Carolina|tree|company|liked|other|businesses|all|review|BOOK\.?)$/i;function custom(t){var b=S[3][0];$("ln").style.transform="scaleY("+e(t,b+.3,b+.9)+")";
+var b4=S[4][0],k=Math.floor(cl((t-(b4+5.6))/0.7)*4);$("w").textContent="BOOK".slice(0,k)+((t*2|0)%2&&k<4?"|":"");}
+function cl(x){return x<0?0:x>1?1:x}
+function e(t,a,b){var x=cl((t-a)/(b-a));return 1-Math.pow(1-x,3)}
+function bk(t,a,b){var x=cl((t-a)/(b-a)),c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
+function $(id){return document.getElementById(id)}
+function q(s){return document.querySelector(s)}
+var CH=[];VO.forEach(function(v){var w=v[2].split(" "),n=Math.ceil(w.length/4),per=v[3]/n;for(var i=0;i<n;i++)CH.push([v[0]+i*per,v[0]+(i+1)*per,w.slice(i*4,i*4+4)]);});
+function render(t){
+  $("bar").style.width=(t/DUR*100)+"%";
+  S.forEach(function(s,i){var el=$("s"+i),o=0;if(t>=s[0]&&t<s[1])o=1;if(i>0&&t>=s[0]&&t<s[0]+.25)o=e(t,s[0],s[0]+.25);el.style.opacity=o;
+    el.querySelectorAll("[data-d]").forEach(function(x){var a=s[0]+parseFloat(x.dataset.d),m=x.dataset.m||"up";
+      var o2=e(t,a,a+.35),b2=bk(t,a,a+.55);
+      if(m=="up")x.style.transform="translateY("+((1-b2)*90)+"px)";
+      if(m=="pop")x.style.transform="scale("+(.5+.5*b2)+")";
+      if(m=="left")x.style.transform="translateX("+((1-b2)*-400)+"px)";
+      if(m=="right")x.style.transform="translateX("+((1-b2)*400)+"px)";
+      if(m=="slam")x.style.transform="scale("+(1+1.2*(1-e(t,a,a+.3)))+") rotate("+(x.dataset.r||0)+"deg)";
+      x.style.opacity=o2;});});
+  if(window.custom)custom(t);
+  var c=CH.filter(function(c){return t>=c[0]&&t<c[1]})[0],sp=q("#cap span");
+  if(c){sp.style.display="inline-block";sp.innerHTML=c[2].map(function(w){return KEY.test(w)?"<b>"+w+"</b>":w}).join(" ");}else sp.style.display="none";
+}
+render(0);
+</script></body></html>
