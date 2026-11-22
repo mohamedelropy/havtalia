@@ -1,0 +1,80 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"JBM";src:url(../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2);font-weight:600}
+:root{--ink:#121815;--forest:#1D4A37;--hi:#FF6B1A;--sand:#F4F1EA;--muted:#6B746F;--lime:#C9E27A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121815}
+#v{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Sch,sans-serif}
+.sc{position:absolute;inset:0;opacity:0}
+.disp{font-family:Fraunces,serif;font-weight:640;letter-spacing:-.012em;line-height:.98}
+.mono{font-family:JBM,monospace;letter-spacing:.14em;text-transform:uppercase;font-size:32px}
+.a{position:absolute;left:80px;right:80px}
+#cap{position:absolute;left:60px;right:60px;bottom:250px;text-align:center;z-index:20}
+#cap span{display:inline-block;background:rgba(0,0,0,.82);color:#fff;font:800 50px/1.25 Sch;padding:14px 26px;border-radius:18px}
+#cap b{color:#C9E27A}
+#bar{position:absolute;left:0;top:0;height:10px;background:#FF6B1A;z-index:30}
+#tag{position:absolute;top:70px;left:80px;z-index:25;display:flex;gap:16px;align-items:center;font:700 30px Sch}
+#tag img{width:62px;height:62px;border-radius:50%;background:#fff;object-fit:contain;padding:6px}
+.offer{position:absolute;left:80px;right:80px;border-radius:36px;padding:44px}
+.offer .pr{font:700 150px/1 Fraunces}
+.offer p{font:800 54px/1.2 Sch;margin-top:16px}
+.offer .g{margin-top:26px;padding-top:24px;border-top:2px solid currentColor;font:700 36px/1.3 Sch;opacity:.9}
+.cm{position:absolute;left:80px;right:80px;display:flex;align-items:center;gap:24px;background:#fff;color:#121815;border-radius:30px;padding:24px 30px;box-shadow:0 24px 60px -24px rgba(0,0,0,.4)}
+.cm .av{width:80px;height:80px;border-radius:50%;background:#1D4A37}
+.cm small{font:600 26px JBM;color:#6B746F;letter-spacing:.1em;text-transform:uppercase}
+.cm .w{font:800 64px Sch;color:#FF6B1A;min-height:70px}
+.cm .heart{margin-left:auto;font-size:56px;color:#FF6B1A}
+
+.sc{background:radial-gradient(circle at 50% 30%,#1b2c4a,#070b14 70%);color:#fff}
+.st{position:absolute;left:80px;right:80px;top:330px;text-align:center}
+.lab{font:600 32px JBM;letter-spacing:.14em;color:#8fa3c8;text-transform:uppercase}
+.big{font:640 118px/1 Fraunces;margin-top:30px}
+.stamp{position:absolute;left:50%;top:1010px;margin-left:-260px;width:520px;text-align:center;border:10px solid #FF4D3A;color:#FF4D3A;font:800 110px/1 Sch;padding:20px 0;border-radius:24px;letter-spacing:.04em}
+.ph{position:absolute;left:190px;width:700px;top:250px;height:1250px;border-radius:90px;background:linear-gradient(160deg,#2a3f6b,#0e1526);border:12px solid #2b2f38;box-shadow:0 60px 120px -30px rgba(0,0,0,.8)}
+.ph .clk{position:absolute;left:0;right:0;top:130px;text-align:center;font:200 190px/1 Sch;font-weight:600;letter-spacing:-.02em}
+.ph .dt{position:absolute;left:0;right:0;top:100px;text-align:center;font:600 30px JBM;color:#c8d4ee;letter-spacing:.12em}
+.ph .live{position:absolute;left:0;right:0;margin:auto;width:fit-content;top:420px;background:#25D366;color:#062;font:800 40px Sch;padding:16px 34px;border-radius:999px}
+.nt{position:absolute;left:30px;right:30px;background:rgba(255,255,255,.92);color:#121815;border-radius:36px;padding:26px 28px;display:flex;gap:22px;align-items:center}
+.nt i{font-style:normal;width:84px;height:84px;border-radius:20px;background:#FF6B1A;display:grid;place-items:center;font-size:46px;flex:none}
+.nt small{display:block;font:600 24px JBM;color:#6B746F;letter-spacing:.06em}
+.nt b{font:800 40px/1.15 Sch}
+.chk{position:absolute;left:80px;right:80px;display:flex;align-items:center;gap:30px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.18);border-radius:30px;padding:34px 40px;font:800 64px Sch}
+.chk i{font-style:normal;width:100px;height:100px;border-radius:50%;background:#C9E27A;color:#1D4A37;display:grid;place-items:center;font-size:56px;flex:none}
+</style></head><body><div id="v"><div id="bar"></div><div id="tag" style="color:#fff"><img src="../assets/logo.webp">@havtaliallc</div><div class="sc" id="s0"><div class="st"><div class="lab" data-d=".1">What he believed</div><div class="big" data-d=".3">Facebook ads don't work in <span style="color:#FF6B1A;font-style:italic">New Jersey.</span></div></div>
+<div class="stamp" data-d="1.9" data-m="slam" data-r="-8">MYTH?</div></div><div class="sc" id="s1"><div class="ph" data-d="0" data-m="up"><div class="dt">TREE SERVICE · NEW JERSEY</div><div class="clk" id="c1">HR 0</div><div class="live" data-d="1.2" data-m="pop">● ADS LIVE</div></div></div><div class="sc" id="s2"><div class="ph"><div class="dt">TREE SERVICE · NEW JERSEY</div><div class="clk" id="c2">HR 0</div>
+<div class="nt" data-d="1.6" data-m="right" style="top:520px"><i>🔔</i><div><small>HAVTALIA · NOW</small><b>New estimate booked</b></div></div>
+<div class="nt" data-d="2.4" data-m="right" style="top:720px"><i>🔔</i><div><small>HAVTALIA · NOW</small><b>New estimate booked</b></div></div></div></div><div class="sc" id="s3"><div class="a mono" style="top:330px;color:#8fa3c8" data-d=".1">The result</div>
+<div class="chk" data-d=".3" data-m="left" style="top:450px"><i>✓</i>2 estimates · 6 hrs</div>
+<div class="chk" data-d=".9" data-m="left" style="top:660px"><i>✓</i>1 job closed</div>
+<div class="chk" data-d="1.6" data-m="left" style="top:870px;background:#FF6B1A;border-color:#FF6B1A"><i>✓</i>Signed · 1 month</div></div><div class="sc" id="s4"><div class="a disp" style="top:250px;font-size:112px" data-d=".1">Test it in <span style="color:#FF6B1A;font-style:italic">your</span> area.</div>
+<div class="offer" data-d="1.6" data-m="pop" style="top:560px;background:#FF6B1A;color:#fff"><div class="pr">$297</div><p>2 real appointments<br>in your area.</p><div class="g">Don't get 2? Full refund, or we keep working until you do.</div></div>
+<div class="cm" data-d="7.8" style="top:1240px"><div class="av"></div><div><small>Comment</small><div class="w" id="w"></div></div><div class="heart">♥</div></div></div><div id="cap"><span></span></div></div><script>var DUR=28.84;var S=[[0, 3.55], [3.55, 6.87], [6.87, 11.6], [11.6, 15.7], [15.7, 28.84]];var VO=[[0.3, "n0", "He told us Facebook ads don't work in New Jersey.", 2.75], [3.85, "n1", "So we ran a test. The ads went live.", 2.52], [7.17, "n2", "Six hours later, two estimates were booked on his calendar.", 3.93], [11.9, "n3", "He closed one of them, and signed with us for a month.", 3.3], [16.0, "n4", "Think Facebook doesn't work in your area? Test it. $297, two real appointments. Don't get them? Full refund, or we keep working until you do. Comment BOOK.", 10.94]];var KEY=/^(Facebook|New|Jersey\.|test\.|live\.|Six|hours|two|estimates|closed|signed|month\.|\$297,|refund,|BOOK\.?)$/i;function custom(t){var b=S[1][0];$("c1").textContent="HR 0";
+var b2=S[2][0],p=e(t,b2+.2,b2+1.5);$("c2").textContent="HR "+Math.round(6*p);
+var b4=S[4][0],k=Math.floor(cl((t-(b4+8.6))/0.7)*4);$("w").textContent="BOOK".slice(0,k)+((t*2|0)%2&&k<4?"|":"");}
+function cl(x){return x<0?0:x>1?1:x}
+function e(t,a,b){var x=cl((t-a)/(b-a));return 1-Math.pow(1-x,3)}
+function bk(t,a,b){var x=cl((t-a)/(b-a)),c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
+function $(id){return document.getElementById(id)}
+function q(s){return document.querySelector(s)}
+var CH=[];VO.forEach(function(v){var w=v[2].split(" "),n=Math.ceil(w.length/4),per=v[3]/n;for(var i=0;i<n;i++)CH.push([v[0]+i*per,v[0]+(i+1)*per,w.slice(i*4,i*4+4)]);});
+function render(t){
+  $("bar").style.width=(t/DUR*100)+"%";
+  S.forEach(function(s,i){var el=$("s"+i),o=0;if(t>=s[0]&&t<s[1])o=1;if(i>0&&t>=s[0]&&t<s[0]+.25)o=e(t,s[0],s[0]+.25);el.style.opacity=o;
+    el.querySelectorAll("[data-d]").forEach(function(x){var a=s[0]+parseFloat(x.dataset.d),m=x.dataset.m||"up";
+      var o2=e(t,a,a+.35),b2=bk(t,a,a+.55);
+      if(m=="up")x.style.transform="translateY("+((1-b2)*90)+"px)";
+      if(m=="pop")x.style.transform="scale("+(.5+.5*b2)+")";
+      if(m=="left")x.style.transform="translateX("+((1-b2)*-400)+"px)";
+      if(m=="right")x.style.transform="translateX("+((1-b2)*400)+"px)";
+      if(m=="slam")x.style.transform="scale("+(1+1.2*(1-e(t,a,a+.3)))+") rotate("+(x.dataset.r||0)+"deg)";
+      x.style.opacity=o2;});});
+  if(window.custom)custom(t);
+  var c=CH.filter(function(c){return t>=c[0]&&t<c[1]})[0],sp=q("#cap span");
+  if(c){sp.style.display="inline-block";sp.innerHTML=c[2].map(function(w){return KEY.test(w)?"<b>"+w+"</b>":w}).join(" ");}else sp.style.display="none";
+}
+render(0);
+</script></body></html>
