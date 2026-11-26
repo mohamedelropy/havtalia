@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900}
+@font-face{font-family:"Fraunces";src:url(../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Sch";src:url(../node_modules/@fontsource/schibsted-grotesk/files/schibsted-grotesk-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:"JBM";src:url(../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-600-normal.woff2);font-weight:600}
+:root{--ink:#121815;--forest:#1D4A37;--hi:#FF6B1A;--sand:#F4F1EA;--muted:#6B746F;--lime:#C9E27A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121815}
+#v{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Sch,sans-serif}
+.sc{position:absolute;inset:0;opacity:0}
+.disp{font-family:Fraunces,serif;font-weight:640;letter-spacing:-.012em;line-height:.98}
+.mono{font-family:JBM,monospace;letter-spacing:.14em;text-transform:uppercase;font-size:32px}
+.a{position:absolute;left:80px;right:80px}
+#cap{position:absolute;left:60px;right:60px;bottom:250px;text-align:center;z-index:20}
+#cap span{display:inline-block;background:rgba(0,0,0,.82);color:#fff;font:800 50px/1.25 Sch;padding:14px 26px;border-radius:18px}
+#cap b{color:#C9E27A}
+#bar{position:absolute;left:0;top:0;height:10px;background:#FF6B1A;z-index:30}
+#tag{position:absolute;top:70px;left:80px;z-index:25;display:flex;gap:16px;align-items:center;font:700 30px Sch}
+#tag img{width:62px;height:62px;border-radius:50%;background:#fff;object-fit:contain;padding:6px}
+.offer{position:absolute;left:80px;right:80px;border-radius:36px;padding:44px}
+.offer .pr{font:700 150px/1 Fraunces}
+.offer p{font:800 54px/1.2 Sch;margin-top:16px}
+.offer .g{margin-top:26px;padding-top:24px;border-top:2px solid currentColor;font:700 36px/1.3 Sch;opacity:.9}
+.cm{position:absolute;left:80px;right:80px;display:flex;align-items:center;gap:24px;background:#fff;color:#121815;border-radius:30px;padding:24px 30px;box-shadow:0 24px 60px -24px rgba(0,0,0,.4)}
+.cm .av{width:80px;height:80px;border-radius:50%;background:#1D4A37}
+.cm small{font:600 26px JBM;color:#6B746F;letter-spacing:.1em;text-transform:uppercase}
+.cm .w{font:800 64px Sch;color:#FF6B1A;min-height:70px}
+.cm .heart{margin-left:auto;font-size:56px;color:#FF6B1A}
+
+.sc{background:radial-gradient(circle at 50% 25%,#2a6249,#122d21 75%);color:#F4F1EA}
+.lbl{position:absolute;left:80px;right:80px;top:300px;color:#C9E27A}
+.bub{position:absolute;left:80px;right:130px;top:520px;background:#F4F1EA;color:#121815;border-radius:56px 56px 56px 14px;padding:60px 56px;font:800 70px/1.22 Sch;box-shadow:0 50px 90px -30px rgba(0,0,0,.6)}
+.who{position:absolute;left:80px;right:80px;top:1220px;font:700 40px/1.35 Sch;color:#C9E27A}
+.heart2{position:absolute;right:90px;top:430px;width:140px;height:140px;border-radius:50%;background:#fff;color:#FF6B1A;display:grid;place-items:center;font-size:76px;z-index:2}
+.mini{position:absolute;left:80px;max-width:760px;background:#F4F1EA;color:#121815;border-radius:40px 40px 40px 10px;padding:30px 40px;font:800 44px/1.2 Sch}
+</style></head><body><div id="v"><div id="bar"></div><div id="tag" style="color:#fff"><img src="../assets/logo.webp">@havtaliallc</div><div class="sc" id="s0"><div class="a disp" style="top:290px;font-size:108px" data-d="0">Home service owners: what clients <span style="color:#FF6B1A;font-style:italic">texted us</span></div><div class="mini" data-d=".7" data-m="left" style="top:900px">“It went great…”</div><div class="mini" data-d="1.2" data-m="left" style="top:1060px">“…a legit good estimate…”</div><div class="mini" data-d="1.7" data-m="left" style="top:1220px">“…you work fast…”</div></div><div class="sc" id="s1"><div class="lbl mono" data-d="0">Message 1 of 4</div><div class="bub" data-d=".1" data-m="left" style="font-size:70px">“It went great it was a really good appointment thank you”</div><div class="heart2" data-d="1.4" data-m="pop">♥</div><div class="who" data-d=".5">Client · after a booked free consultation</div></div><div class="sc" id="s2"><div class="lbl mono" data-d="0">Message 2 of 4</div><div class="bub" data-d=".1" data-m="left" style="font-size:70px">“It was a legit good estimate for an exterior paint job !!”</div><div class="heart2" data-d="1.4" data-m="pop">♥</div><div class="who" data-d=".5">Painting contractor · after a booked estimate</div></div><div class="sc" id="s3"><div class="lbl mono" data-d="0">Message 3 of 4</div><div class="bub" data-d=".1" data-m="left" style="font-size:70px">“I’m very impressed you work fast I like it”</div><div class="heart2" data-d="1.4" data-m="pop">♥</div><div class="who" data-d=".5">Client · during the trial</div></div><div class="sc" id="s4"><div class="lbl mono" data-d="0">Message 4 of 4</div><div class="bub" data-d=".1" data-m="left" style="font-size:62px">“They are extremely professional and always respond promptly… they truly make your money go a long way.”</div><div class="heart2" data-d="1.4" data-m="pop">♥</div><div class="who" data-d=".5">★ Facebook recommendation</div></div><div class="sc" id="s5"><div class="a disp" style="top:250px;font-size:112px" data-d="0">Test it in <span style="color:#FF6B1A;font-style:italic">your</span> area.</div>
+<div class="offer" data-d=".9" data-m="pop" style="top:560px;background:#FF6B1A;color:#fff"><div class="pr">$297</div><p>2 real appointments<br>in your area.</p><div class="g">Don't get 2? Full refund, or we keep working until you do.</div></div>
+<div class="cm" data-d="8.6" style="top:1240px"><div class="av"></div><div><small>Comment</small><div class="w" id="w"></div></div><div class="heart">♥</div></div></div><div id="cap"><span></span></div></div><script>var DUR=31;var S=[[0,3.8],[3.8,7.3],[7.3,11.1],[11.1,14.5],[14.5,18.5],[18.5,31]];var VO=[[0.2,"a0","Home service owners, here's what real clients sent us.",3.33],[3.9,"a1","It went great, it was a really good appointment, thank you.",3.01],[7.4,"a2","It was a legit good estimate for an exterior paint job.",3.37],[11.2,"a3","I'm very impressed. You work fast, I like it.",2.97],[14.7,"a4","And on Facebook: they truly make your money go a long way.",3.48],[18.8,"a5","Want to test it? $297, two real appointments in your area.",5.42],[24.5,"a6","Don't get two? Full refund, or we keep working until you do. Comment BOOK.",4.61]];var KEY=/^(real|great,|legit|estimate|impressed\.|fast,|money|long|\$297,|appointments|refund,|BOOK\.?)$/i;function custom(t){var b=S[5][0],k=Math.floor(cl((t-(b+9.2))/0.7)*4);$("w").textContent="BOOK".slice(0,k)+((t*2|0)%2&&k<4?"|":"");}
+function cl(x){return x<0?0:x>1?1:x}
+function e(t,a,b){var x=cl((t-a)/(b-a));return 1-Math.pow(1-x,3)}
+function bk(t,a,b){var x=cl((t-a)/(b-a)),c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
+function $(id){return document.getElementById(id)}
+function q(s){return document.querySelector(s)}
+var CH=[];VO.forEach(function(v){var w=v[2].split(" "),n=Math.ceil(w.length/4),per=v[3]/n;for(var i=0;i<n;i++)CH.push([v[0]+i*per,v[0]+(i+1)*per,w.slice(i*4,i*4+4)]);});
+function render(t){
+  $("bar").style.width=(t/DUR*100)+"%";
+  S.forEach(function(s,i){var el=$("s"+i),o=0;if(t>=s[0]&&t<s[1])o=1;if(i>0&&t>=s[0]&&t<s[0]+.25)o=e(t,s[0],s[0]+.25);el.style.opacity=o;
+    el.querySelectorAll("[data-d]").forEach(function(x){var a=s[0]+parseFloat(x.dataset.d),m=x.dataset.m||"up";
+      var o2=e(t,a,a+.35),b2=bk(t,a,a+.55);
+      if(m=="up")x.style.transform="translateY("+((1-b2)*90)+"px)";
+      if(m=="pop")x.style.transform="scale("+(.5+.5*b2)+")";
+      if(m=="left")x.style.transform="translateX("+((1-b2)*-400)+"px)";
+      if(m=="right")x.style.transform="translateX("+((1-b2)*400)+"px)";
+      if(m=="slam")x.style.transform="scale("+(1+1.2*(1-e(t,a,a+.3)))+") rotate("+(x.dataset.r||0)+"deg)";
+      x.style.opacity=o2;});});
+  if(window.custom)custom(t);
+  var c=CH.filter(function(c){return t>=c[0]&&t<c[1]})[0],sp=q("#cap span");
+  if(c){sp.style.display="inline-block";sp.innerHTML=c[2].map(function(w){return KEY.test(w)?"<b>"+w+"</b>":w}).join(" ");}else sp.style.display="none";
+}
+render(0);
+</script></body></html>
